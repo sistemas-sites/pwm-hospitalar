@@ -22,37 +22,61 @@
         }
 
         /* Cabeçalho */
-        header {
-            background-color: #0056b3;
-            color: white;
-            padding: 20px 10%;
+        /* Cabeçalho */
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 10%;    
+    display: flex;
+    justify-content: space-between; /* Garante que logo e nav fiquem separados */
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o header ocupe a largura total */
+    
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav {
+    margin-left: auto; /* Empurra o nav para a direita */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+
+        /* Ícones de contato */
+        .social-icons {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            gap: 15px;
         }
 
-        header .logo img {
-            height: 60px;
-        }
-
-        header nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        header nav ul li {
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
+        .social-icons a {
             color: white;
+            font-size: 24px;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
         }
 
-        header nav ul li a:hover {
+        .social-icons a:hover {
             color: #ffcc00;
         }
 
@@ -63,6 +87,7 @@
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         section h1, section h2 {
@@ -85,6 +110,75 @@
             list-style: disc inside;
             margin-top: 10px;
         }
+
+        /* Estilo da imagem de início */
+        .site {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .site img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .imagem {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para contraste */
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Estilo do carrossel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* Garante que só uma imagem seja visível de cada vez */
+            height: 220px;
+        }
+        
+        .carousel {
+            display: flex;
+            transition: transform 0.3s ease-in-out; /* Suaviza o movimento de transição */
+        }
+        
+        .carousel img {
+            width: 50%; /* Cada imagem ocupa 100% da largura do contêiner */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+        }
+        
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            z-index: 100;
+        }
+        
+        .carousel-btn.left {
+            left: 10px; /* Posiciona a seta para a esquerda */
+        }
+        
+        .carousel-btn.right {
+            right: 10px; /* Posiciona a seta para a direita */
+        }
+        
 
         /* Rodapé */
         footer {
@@ -115,38 +209,133 @@
             background-color: #ffcc00;
             color: #333;
         }
+
+        /* Contato e Orçamento */
+        .social-icons {
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            font-size: 30px;
+        }
+
+        .whatsapp {
+            background-color: #25D366;
+            padding: 10px;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .instagram {
+            background-color: #E1306C;
+            padding: 10px;
+            border-radius: 50%;
+            color: white;
+        }
+
+        .orcamento-btn {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #ffcc00;
+            color: #333;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .orcamento-btn:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        /* Layout Responsivo */
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+
+            .site img {
+                height: 250px;
+            }
+
+            section {
+                padding: 30px 5%;
+            }
+
+            .carousel-container {
+                max-width: 95%;
+            }
+        }
+        .quinze{
+            color: blue;
+        }
+        .maq{
+            width: 200px;
+            float: right;
+            margin-right: 100px;
+        }
+        .maq1{
+            width: 200px;
+        }
+        .maq2{
+            width: 200px;
+            float: right;
+            margin-right: 100px;
+        }
+        .maq12{
+            width: 200px;
+        }
+        .maq3{
+            width: 200px;
+            float: left;
+            margin-left: 100px;
+        }
+        .maq4{
+            width: 200px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Cabeçalho com logo e menu -->
-    <header>
-        <div class="logo">
-            <img src="logo-ficticio.png" alt="PWM Manutenção Hospitalar">
+    <!-- Imagem de início com sobreposição -->
+    <div class="site">
+        <img src="src/Captura de tela 2025-01-18 084654.png" alt="Imagem de Início">
+        <div class="imagem">            
+            <header>
+                <div class="logo">
+                    <img src="src/Captura de tela 2025-01-18 082140.png" alt="PWM Manutenção Hospitalar">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#clientes">Contatos</a></li>
+                        <li><a href="#contato">Contatos</a></li>
+                    </ul>
+                </nav>
+            </header><br><br>
+            <h1>Bem-vindo à PWM Manutenção Hospitalar</h1>
+            <p>Somos especialistas em manutenção de equipamentos hospitalares, garantindo a segurança e a eficiência que sua instituição precisa.</p>
+        <h2 class="quinze">+15 anos de experiência</h2>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contatos</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    </div>
+    <div class="maq2">
+        <p>Manuteção em maquinas</p>
+        <img class="maq12" src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.09_72dbc25c.jpg" alt="">
+    </div>
     <!-- Seções do site -->
-    <section id="inicio">
-        <h1>Bem-vindo à PWM Manutenção Hospitalar</h1>
-        <p>Somos especialistas em manutenção de equipamentos hospitalares, garantindo a segurança e a eficiência que sua instituição precisa.</p>
-        <img src="inicio-ficticio.jpg" alt="Bem-vindo">
-    </section>
-
     <section id="sobre">
         <h2>Sobre Nós</h2>
         <p>A PWM Manutenção Hospitalar é uma empresa com mais de 10 anos de experiência em manutenção de equipamentos médicos. Nosso compromisso é com a qualidade e a segurança.</p>
-        <img src="sobre-ficticio.jpg" alt="Sobre nós">
     </section>
-
+    <div class="maq3">
+        <p>Manuteção em maquinas</p>
+        <img class="maq4" src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.12_102e99da.jpg" alt="">
+    </div>
     <section id="servicos">
         <h2>Serviços</h2>
         <p>Nossos serviços incluem:</p>
@@ -156,18 +345,73 @@
             <li>Testes de calibração e segurança</li>
             <li>Consultoria técnica especializada</li>
         </ul>
-        <img src="servicos-ficticio.jpg" alt="Serviços">
+    </section>
+    <div class="maq">
+        <p>Manuteção em maquinas</p>
+        <img class="maq1" src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.55.43_38127d00.jpg" alt="">
+    </div>
+    <section id="clientes">
+        <h2>Clientes</h2>
+        <p>Clientes representados pela PWM:</p>
+        <ul>
+            <li>Manutenção preventiva de equipamentos médicos</li>
+            <li>Manutenção corretiva</li>
+            <li>Testes de calibração e segurança</li>
+            <li>Consultoria técnica especializada</li>
+        </ul>
     </section>
 
+    <section>
+        <h2>Galeria de Imagens</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn left" onclick="moveCarousel(-1)">❮</button>
+            <div class="carousel" id="carousel">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.49_2e039bae.jpg" alt="Imagem 1">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.55.34_d439c63b.jpg" alt="Imagem 2">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.55.42_3c1b30c0.jpg" alt="Imagem 3">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.55.43_38127d00.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.55.44_686282ee.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.55.45_2a02e085.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.07_1785b451.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.07_1785b451.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.08_f4ec52ec.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.09_72dbc25c.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.09_983d2016.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.10_6a71d944.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.10_81efef72.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.11_a4a6b029.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.12_102e99da.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.12_b0d347b3.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.13_079b4103.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.13_079b4103.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.49_2e039bae.jpg" alt="Imagem 4">
+                <img src="src/Imagem do WhatsApp de 2025-01-17 à(s) 14.56.49_6d811be0.jpg" alt="Imagem 4">
+            </div>
+            <button class="carousel-btn right" onclick="moveCarousel(1)">❯</button>
+        </div>
+    </section>
+
+    <!-- Contato e Redes Sociais -->
     <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco para saber mais sobre nossos serviços ou solicitar um orçamento.</p>
-        <address>
-            <p>Email: contato@pwmmanutencao.com.br</p>
-            <p>Telefone: (11) 98765-4321</p>
-            <p>Endereço: Avenida Saúde, 456 - São Paulo, SP</p>
-        </address>
-        <a class="contact-btn" href="mailto:contato@pwmmanutencao.com.br">Solicitar Orçamento</a>
+        <h2>Fale Conosco</h2>
+        <p>
+            <a href="https://wa.me/5562981403350" target="_blank" style="text-decoration: none; color: inherit;">
+                <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="WhatsApp" style="vertical-align: middle; margin-right: 10px; width: 30px;">
+                WhatsApp: <strong>5562981403350</strong>
+            </a>
+        </p>
+        <p>
+            <a href="mailto:" style="text-decoration: none; color: inherit;">
+                <img src="https://img.icons8.com/fluency/48/000000/email.png" alt="E-mail" style="vertical-align: middle; margin-right: 10px; width: 30px;">
+                Email: <strong>aguardando email corporátivo</strong>
+            </a>
+        </p>
+        <p>
+            <a href="https://www.instagram.com/azuldigital_/" target="_blank" style="text-decoration: none; color: inherit;">
+                <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram" style="vertical-align: middle; margin-right: 10px; width: 30px;">
+                Instagram: <strong>@azuldigital_</strong>
+            </a>
+        </p>
     </section>
 
     <!-- Rodapé -->
@@ -177,16 +421,20 @@
     </footer>
 
     <script>
-        // Função para rolar a página até a seção correspondente
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+        let currentIndex = 0;
+        const carousel = document.getElementById('carousel');
+        const images = carousel.children;
+        const totalImages = images.length;
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        function moveCarousel(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = totalImages - 1;
+            if (currentIndex >= totalImages) currentIndex = 0;
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
     </script>
+
+    <!-- FontAwesome para ícones -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
