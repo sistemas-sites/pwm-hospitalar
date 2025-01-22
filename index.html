@@ -320,30 +320,73 @@ header nav ul li a:hover {
         .ini{
             display: flex;
         }
+         .nav2 {
+            display: flex;
+            text-align: center;
+            border: 1px solid red;
+            justify-content: center;
+            align-items: center;
+            color: #f4f4f9;
+            width: 100%;
+            height: 60px;
+            padding: 10px 0; /* Ajuste para garantir que o conteúdo fique mais espaçado */
+        }
         
+        .nav21 {
+            width: 100px;
+            text-align: center;
+        }
+        
+        .logoini {
+            width: 70px; /* Ajuste para garantir que a imagem tenha 70px de largura */
+            margin-right: 10px; /* Espaçamento à direita do logo */
+        }
+        
+        .logoini1 {
+            display: flex;
+            justify-content: flex-start; /* Garante que o logo fique alinhado à esquerda */
+            align-items: center;
+            margin-right: 20px; /* Espaçamento do logo para o próximo link */
+        }
+        
+        .nav2 a {
+            color: #f4f4f9; /* Cor dos links */
+            text-decoration: none; /* Remove o sublinhado dos links */
+            display: block;
+            padding: 5px 10px; /* Um pouco de espaçamento ao redor dos links */
+            cursor: pointer; /* Garante que o cursor se torne um ponteiro ao passar sobre os links */
+        }
+        
+        .nav2 a:hover {
+            background-color: #ffcc00; /* Cor ao passar o mouse */
+            color: #000; /* Altera a cor do texto ao passar o mouse */
+        }
+        html {
+            scroll-behavior: smooth; /* Rolagem suave */
+        }
         
     </style>
 </head>
 <body>
-
+<div class="nav1">
+        <div class="nav2">
+            <div class="logoini1">
+                <img style="width: 50px;" src="src/Captura de tela 2025-01-18 082140.png" alt="PWM Manutenção Hospitalar">
+            </div>
+            <div class="nav21"><a href="#inicio">Início</a></div>
+            <div class="nav21"><a href="#sobre">Sobre Nós</a></div>
+            <div class="nav21"><a href="#servicos">Serviços</a></div>
+            <div class="nav21"><a href="#clientes">Clientes</a></div>
+            <div class="nav21"><a href="#contato">Contatos</a></div>            
+        </div>
+    </div>
     <!-- Imagem de início com sobreposição -->
     <div class="site">
-        <div class="ini">
-            <nav>
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#clientes">Cientes</a></li>
-                        <li><a href="#contato">Contatos</a></li>
-                    </ul>
-                </nav> </div>
+        
         <img src="src/BANCADA 10.jpg" alt="Imagem de Início">
         <div class="imagem">            
             <header>
-                <div class="logo">
-                    <img src="src/Captura de tela 2025-01-18 082140.png" alt="PWM Manutenção Hospitalar">
-                </div>
+                
                 
             </header><br><br>           
         </div>
