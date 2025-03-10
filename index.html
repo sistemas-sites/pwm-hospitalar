@@ -390,6 +390,42 @@ header nav ul li a:hover {
         .h24{
             color: blue;
         }
+
+
+        .ser {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; /* Permite quebrar linha quando necessário */
+            gap: 5px; /* Espaçamento entre as imagens */
+            justify-content: center; /* Centraliza as imagens quando quebra */
+            cursor: pointer;
+        }
+        
+        .ser1 {
+            width: calc(25% - 5px); /* 25% da largura do contêiner menos o espaçamento */
+            height: 250px; /* Mantém altura fixa */
+            object-fit: cover; /* Mantém o enquadramento correto sem distorcer */
+            max-width: 100%;
+            border: 3px solid rgb(142, 241, 142);
+        }
+        .ser1:hover {
+            transform: scale(1.2); /* Aumenta em 20% */
+            z-index: 10; /* Garante que fique sobreposta às outras */
+        }
+        
+        /* Responsividade: Reduz para duas colunas em telas menores */
+        @media (max-width: 800px) {
+            .ser1 {
+                width: calc(50% - 5px); /* 2 imagens por linha */
+            }
+        }
+        
+        /* Responsividade: Uma coluna em telas muito pequenas */
+        @media (max-width: 500px) {
+            .ser1 {
+                width: 100%; /* 1 imagem por linha */
+            }
+        }
     </style>
 </head>
 <body>
@@ -445,6 +481,19 @@ header nav ul li a:hover {
             <li>Testes de calibração e segurança</li>
             <li>Consultoria técnica especializada</li>
         </ul>
+
+        <div class="ser">            
+            <img  class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.41.46_5066d33c.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.42.50_6ddb3590.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.44.32_e483df24.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.44.48_0d5ec2a5.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.45.58_4aead432.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.53.58_328daad9.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.53.58_69d7620d.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.53.59_5c42b1fa.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.53.59_d6f5190d.jpg" alt="">
+            <img class="ser1" src="src2/Imagem do WhatsApp de 2025-03-10 à(s) 12.54.00_84c1d2a2.jpg" alt="">
+        </div>
     </section>
    
    
