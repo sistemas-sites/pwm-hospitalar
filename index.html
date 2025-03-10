@@ -142,53 +142,57 @@ header nav ul li a:hover {
         }
 
         /* Estilo do carrossel */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden; /* Garante que só uma imagem seja visível de cada vez */
-            height: 350px;
-            overflow-y: hidden;
-            overflow-x: auto;
-        }
-        
-        .carousel {
-            display: flex;
-            transition: transform 0.3s ease-in-out; /* Suaviza o movimento de transição */
-        }
-        
-        .carousel img {
-            width: 300px; /* Cada imagem ocupa 100% da largura do contêiner */
-            height: 300px;
-            margin-right: 5px;
-            border: 3px solid #25D366;
-            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
-        }
-        .carousel img:hover {
-          cursor: pointer;
-          width: 350px; /* Cada imagem ocupa 100% da largura do contêiner */
-          height: 350px;
-        }
-        
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            font-size: 24px;
-            padding: 10px;
-            cursor: pointer;
-            border: none;
-            z-index: 100;
-        }
-        
-        .carousel-btn.left {
-            left: 10px; /* Posiciona a seta para a esquerda */
-        }
-        
-        .carousel-btn.right {
-            right: 10px; /* Posiciona a seta para a direita */
-        }
+       .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Garante que só uma imagem seja visível de cada vez */
+    height: 350px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out; /* Suaviza o movimento de transição */
+}
+
+.carousel img {
+    width: 300px;
+    height: 300px;
+    margin-right: 5px;
+    border: 3px solid #25D366;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, z-index 0s 0.3s; /* Adiciona transição suave */
+}
+
+.carousel img:hover {
+    cursor: pointer;
+    transform: scale(1.83); /* Aumenta para aproximadamente 550px */
+    z-index: 10; /* Garante que a imagem fique sobre as outras */
+    position: relative;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    z-index: 100;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
         
 
         /* Rodapé */
